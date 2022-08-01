@@ -1,0 +1,34 @@
+{
+  "npmScope": "kyons-angular",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "NzdiYjhmM2MtNjJmMy00MTRmLWE5NmYtMzk5YzhkMTI2NDc5fHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "workspaceLayout": {
+    "appsDir": "projects",
+    "libsDir": "projects"
+  }
+}
